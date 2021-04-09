@@ -20,9 +20,12 @@ RUN apt -y install \
   wget \
   zip
 
-RUN pip3 install gdown
+RUN git clone \
+  --depth=1 \
+  https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 \
+  /opt/aarch64-linux-android-4.9
 
-RUN gdown -O /var/tmp/toolchain.tar.gz --id 1PBr63VEzxTYE9g8vZH3VmJ-6PMPNfxQc && \
-  mkdir -p /opt/toolchain && \
-  tar -xvpf /var/tmp/toolchain.tar.gz -C /opt/toolchain && \
-  rm -f /var/tmp/toolchain.tar.gz
+RUN git clone \
+  --depth=1 \
+  https://github.com/pgjh/qcom-clang-8.git \
+  /opt/qcom-clang-8

@@ -7,14 +7,10 @@ cd /usr/src/kernel
 ln -s /opt/toolchain /usr/src/kernel/toolchain
 
 # execute actual build
-ANDROID_MAJOR_VERSION=r
-PLATFORM_VERSION=11
-export ANDROID_MAJOR_VERSION PLATFORM_VERSION
-make -j$(nproc --all) ARCH=arm64 c2q_chn_openx_defconfig
-make -j$(nproc --all) ARCH=arm64
+bash build_kernel.sh
 
 # remove previous images
-rm -f /out/Image-dtb
+rm -f /out/Image
 
 # copy kernel image out
 cp -fv \
