@@ -9,7 +9,7 @@ do.devicecheck=1
 do.modules=0
 do.cleanup=1
 do.cleanuponabort=1
-device.name1=c2s
+device.name1=c2q
 supported.versions=
 supported.patchlevels=
 '; } # end properties
