@@ -3,17 +3,13 @@
 # change working directory
 cd /usr/src/kernel
 
-# symlink toolchain (installed at /opt)
-ln -s /opt/toolchain /usr/src/kernel/toolchain
-
 # execute actual build
-ANDROID_MAJOR_VERSION=r
-PLATFORM_VERSION=11
-export ANDROID_MAJOR_VERSION PLATFORM_VERSION
-make -j$(nproc --all) ARCH=arm64 c2q_chn_openx_defconfig
-make ARCH=arm64 menuconfig
+bash build_menuconfig.sh
 
-# copy kernel config out
+# remove previous defconfig
+rm -f /out/defconfig
+
+# copy kernel image out
 cp -fv \
-  /usr/src/kernel/.config \
+  /usr/src/kernel/.config
   /out/defconfig
