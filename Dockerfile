@@ -28,5 +28,5 @@ RUN git clone \
 
 RUN git clone \
   --depth=1 \
-  https://github.com/pgjh/qcom-clang-8.git \
-  /opt/qcom-clang-8
+  https://github.com/P-404/proprietary_vendor_qcom_sdclang.git \
+  /opt/qcom-clang
