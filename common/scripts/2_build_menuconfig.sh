@@ -11,5 +11,5 @@ rm -f /out/defconfig
 
 # copy kernel image out
 cp -fv \
-  /usr/src/kernel/.config \
+  /usr/src/kernel/out/.config \
   /out/defconfig
