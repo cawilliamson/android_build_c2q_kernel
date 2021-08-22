@@ -9,7 +9,7 @@ git clone \
 cp -fv /common/configs/anykernel.sh /usr/src/anykernel3/anykernel.sh
 
 # gzip kernel image (and copy at the same time)
-gzip -c /usr/src/kernel/arch/arm64/boot/Image > /usr/src/anykernel3/Image.gz
+gzip -9 -c /usr/src/kernel/arch/arm64/boot/Image > /usr/src/anykernel3/Image.gz
 
 # cleanup previous zips
 rm -f /out/*.zip
