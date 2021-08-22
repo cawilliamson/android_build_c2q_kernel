@@ -11,5 +11,5 @@ rm -f /out/Image
 
 # copy kernel image out
 cp -fv \
-  /usr/src/kernel/arch/arm64/boot/Image \
+  /usr/src/kernel/out/arch/arm64/boot/Image \
   /out/Image
