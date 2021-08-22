@@ -8,10 +8,8 @@ git clone \
 # create config
 cp -fv /common/configs/anykernel.sh /usr/src/anykernel3/anykernel.sh
 
-# copy kernel image
-cp -fv \
-  /usr/src/kernel/arch/arm64/boot/Image-dtb \
-  /usr/src/anykernel3/zImage
+# gzip kernel image (and copy at the same time)
+gzip -c /usr/src/kernel/arch/arm64/boot/Image > /usr/src/anykernel3/Image.gz
 
 # cleanup previous zips
 rm -f /out/*.zip
