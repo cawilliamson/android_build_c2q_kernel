@@ -7,9 +7,9 @@ cd /usr/src/kernel
 bash build_kernel.sh
 
 # remove previous images
-rm -f /out/Image-dtb
+rm -f /out/Image
 
 # copy kernel image out
 cp -fv \
-  /usr/src/kernel/arch/arm64/boot/Image-dtb \
-  /out/Image-dtb
+  /usr/src/kernel/arch/arm64/boot/Image \
+  /out/Image
