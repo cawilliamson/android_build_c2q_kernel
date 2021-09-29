@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker build -t buildkernel .
+docker build -t buildkernel_c2q .
 docker run -it \
   -v $(pwd)/common:/common \
   -v $(pwd)/out:/out \

@@ -9,9 +9,11 @@ RUN apt -y install \
   bc \
   bison \
   build-essential \
+  cpio \
   curl \
   flex \
   git \
+  kmod \
   libncurses5 \
   libncurses-dev \
   libssl-dev \
@@ -19,6 +21,7 @@ RUN apt -y install \
   python3 \
   python3-pip \
   wget \
+  xz-utils \
   zip
 
 RUN git clone \
@@ -29,4 +32,4 @@ RUN git clone \
 RUN git clone \
   --depth=1 \
   https://github.com/P-404/proprietary_vendor_qcom_sdclang.git \
-  /opt/qcom-clang
+  /opt/llvm
